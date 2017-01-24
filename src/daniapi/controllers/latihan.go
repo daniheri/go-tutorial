@@ -17,16 +17,8 @@ type LatihanController struct {
 // @router / [get]
 func (u *LatihanController) Dani() {
 
-	fromModel := models.Latihan{
-		Nama: "Dani heriyanto",
-		Kelas: "12 TKJ",
-		Gender: getGender(1),
-		Tanggal: "12-12-1992",
-		Hobi: []string{
-			"macing",
-			"madang",
-			"turu",
-		},
+	fromModel := models.Latihan{Nama: "Dani heriyanto", Kelas: "12 TKJ", Gender: getGender(1), Tanggal: "12-12-1992",
+		Hobi: [] models.Category {{"mancing", "madang"}},
 	}
 
 	u.Data["json"] = &fromModel
@@ -50,7 +42,7 @@ func (data *LatihanController) DaniPost() {
 		Kelas: "12 TKJ POST",
 		Gender: getGender(1),
 		Tanggal: "12-12-1992 POST",
-		Hobi: []string{"macing","madang","turu", },
+		Hobi: []models.Category{{"mbuh", "yuhu"}},
 	}
 
 	if requestBody.Token == "" || header == ""{

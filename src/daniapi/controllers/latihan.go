@@ -17,7 +17,9 @@ type LatihanController struct {
 // @router / [get]
 func (u *LatihanController) Dani() {
 
-	fromModel := models.Latihan{Nama: "Dani heriyanto", Kelas: "12 TKJ", Gender: getGender(1), Tanggal: "12-12-1992",
+	fromModel := models.Latihan{Nama: "Dani heriyanto",
+		Kelas: "12 TKJ", Gender: getGender(1),
+		Tanggal: "12-12-1992",
 		Hobi: [] models.Category {{"mancing", "madang"}},
 	}
 
